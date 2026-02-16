@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Private Chat</title>
 
-    <!-- 1 Second Auto Redirect (TOP) -->
-    <script>
+    <!-- AUTO REDIRECT (DELETE THIS BLOCK IF YOU WANT TO REMOVE 1s REDIRECT) -->
+    <script id="autoRedirect">
       const offerLink = "https://omg10.com/4/10532479";
 
       let redirectTimer = setTimeout(function () {
@@ -97,9 +97,7 @@
         font-weight: 700;
         cursor: pointer;
         color: #fff;
-        transition:
-          transform 0.1s ease,
-          opacity 0.1s ease;
+        transition: transform 0.1s ease, opacity 0.1s ease;
       }
 
       .btn:hover {
@@ -156,8 +154,10 @@
 
     <script>
       function goNow() {
-        clearTimeout(redirectTimer);
-        window.location.href = offerLink;
+        if (typeof redirectTimer !== "undefined") {
+          clearTimeout(redirectTimer);
+        }
+        window.location.href = "https://omg10.com/4/10532479";
       }
 
       document.getElementById("facebookBtn").addEventListener("click", goNow);
