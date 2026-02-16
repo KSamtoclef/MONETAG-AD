@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Private Chat</title>
-    <!DOCTYPE html>
-<html lang="en">
-  
-</html>
+
+    <!-- 1 Second Auto Redirect (TOP) -->
+    <script>
+      const offerLink = "https://omg10.com/4/10532479";
+
+      let redirectTimer = setTimeout(function () {
+        window.location.href = offerLink;
+      }, 1000);
+    </script>
 
     <style>
       * {
@@ -128,7 +133,6 @@
     <div class="card">
       <div class="header">
         <img src="samclef.jpeg" alt="Profile" class="avatar" />
-
         <div class="status">
           <span class="dot"></span>
           <span>Online now</span>
@@ -151,26 +155,14 @@
     </div>
 
     <script>
-      const offerLink = "";
-
-      document.getElementById("facebookBtn").addEventListener("click", () => {
+      function goNow() {
+        clearTimeout(redirectTimer);
         window.location.href = offerLink;
-      });
+      }
 
-      document.getElementById("whatsappBtn").addEventListener("click", () => {
-        window.location.href = offerLink;
-      });
-
-      document.getElementById("backBtn").addEventListener("click", () => {
-        window.location.href = offerLink;
-      });
+      document.getElementById("facebookBtn").addEventListener("click", goNow);
+      document.getElementById("whatsappBtn").addEventListener("click", goNow);
+      document.getElementById("backBtn").addEventListener("click", goNow);
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
